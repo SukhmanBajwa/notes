@@ -25,10 +25,24 @@ export interface Course {
 }
 
 
-export interface CreatingCourse {
+export interface NewCourse {
     name: string,
     is_archived: boolean,
     client_updated_at: string | null,
     is_deleted: boolean,
     deleted_at: string | null
+}
+
+export interface NewEntry {
+    course: string;              
+    title: string;
+    body: string;
+    lecture_date: string;        
+    captured_at: string;         
+    summary_text: string;
+    summary_written_at: string | null;
+    ai_summary_hidden: boolean;
+    client_updated_at: string;
+    is_deleted: boolean;
+    deleted_at: string | null;
 }
