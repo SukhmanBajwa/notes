@@ -70,6 +70,10 @@ class CourseViewSet(viewsets.ModelViewSet):
             latest_entry_date=Subquery(latest.values("lecture_date")[:1]),
         )
 
+    def perform_destroy(self, instance):
+        instance.is_deleted = True
+        instance.save()
+
     def perform_create(self, serializer):
 
         serializer.save(user=self.request.user)
