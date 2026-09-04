@@ -52,19 +52,22 @@ export {useAuth};
 // --- Helper functions ---
 async function fetchUser(): Promise<UserData | null> {
     const response = await fetchWithAuth(
-        "/api/me/",
+        "/me/",
         {
             method: "GET",
         },
     );
-    if (response.ok) return response.json();
-    return null;
+    if(!response.ok){
+        const data = await response.json().catch(() => null)
+        throw new Error(data?.detail || `Request failed (${response.status})`)
+    }
+    return response.json();
     
 }
 
 async function login(email: string, password: string): Promise<Response> {
     const response = await fetchWithAuth(
-        "/api/login/",
+        "/login/",
         {
             method: "POST",
             
@@ -72,20 +75,23 @@ async function login(email: string, password: string): Promise<Response> {
             body: JSON.stringify({ email, password }),
         },
     );
-    if (!response.ok){
-        throw Error(`HTTP error! Status: ${response.status}`)
+    if(!response.ok){
+        const data = await response.json().catch(() => null)
+        throw new Error(data?.detail || `Request failed (${response.status})`)
     }
-    return response;
+    return response.json();
 }
 
 async function logout(){
     const _response = await fetchWithAuth(
-        "/api/logout/",
+        "/logout/",
         {
             method: "POST",
         }
     );
-    if (!_response.ok){
-        throw Error(`HTTP error! Status: ${_response.status}`)
-    } 
+    if(!_response.ok){
+        const data = await _response.json().catch(() => null)
+        throw new Error(data?.detail || `Request failed (${_response.status})`)
+    }
+    
 }
