@@ -12,7 +12,7 @@ export async function fetchWithAuth(url: string, options: RequestInit = {}) {
     if (!safeMethods.includes(method)) {
         headers["X-CSRFToken"] = cookie
     }
-    const res = await fetch(url, {
+    const res = await fetch(`/api/v1${url}`, {
         ...options,
         headers
         
