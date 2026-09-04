@@ -4,14 +4,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import { useUserData } from './api/auth'
-import { useCourse } from './api/courses'
+import { useACourse, useGetAllCourses, useCourseMutation } from './api/course'
 
 function App() {
   console.log("hook returns:", useUserData());
   const [count, setCount] = useState(0)
 
-  const {userData } = useUserData()
-  const { courses } = useCourse();
+  const { userData } = useUserData()
+  const { courses } = useGetAllCourses();
  
   return (
     <>
@@ -23,6 +23,7 @@ function App() {
         </div>
         <div>
           <h1>Get started</h1>
+          {userData.data && console.log(userData.data.username)}
           {userData.isLoading && <p>Loading…</p>}
           {userData.data && <p>User: {userData.data.username}</p>}
           {!userData.isLoading && !userData.data && <p>Not logged in</p>}
