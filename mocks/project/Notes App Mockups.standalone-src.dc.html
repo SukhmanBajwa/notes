@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#0e0f18">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#0e0f18"/>
+    <rect x="180" y="150" width="840" height="500" rx="24" fill="#161826" stroke="#3f424d" stroke-width="4"/>
+    <rect x="180" y="150" width="840" height="70" rx="24" fill="#232532"/>
+    <rect x="230" y="176" width="120" height="18" rx="9" fill="#9184d9"/>
+    <rect x="240" y="270" width="380" height="22" rx="11" fill="#cfd3e5"/>
+    <rect x="240" y="320" width="440" height="14" rx="7" fill="#595d6c"/>
+    <rect x="240" y="352" width="400" height="14" rx="7" fill="#595d6c"/>
+    <rect x="240" y="400" width="380" height="130" rx="12" fill="none" stroke="#3f424d" stroke-width="4" stroke-dasharray="14 12"/>
+    <rect x="720" y="270" width="250" height="120" rx="12" fill="#232532"/>
+    <rect x="744" y="296" width="150" height="14" rx="7" fill="#9184d9"/>
+    <rect x="744" y="330" width="200" height="12" rx="6" fill="#595d6c"/>
+    <rect x="744" y="354" width="170" height="12" rx="6" fill="#595d6c"/>
+    <rect x="720" y="420" width="250" height="110" rx="12" fill="none" stroke="#5d5294" stroke-width="4"/>
+    <circle cx="748" cy="452" r="10" fill="#9184d9"/>
+    <rect x="770" y="444" width="150" height="14" rx="7" fill="#b5abfc"/>
+    <circle cx="748" cy="496" r="10" fill="#9184d9"/>
+    <rect x="770" y="488" width="120" height="14" rx="7" fill="#b5abfc"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics><meta name="design_doc_mode" content="canvas">
+<link rel="stylesheet" href="nocturne/styles.css">
+<style>
+body{margin:0;background:#0e0f18;font-family:"Inter",system-ui,sans-serif;color:#e9e9ed}
+.dv-turn{padding:40px 44px 32px;border-bottom:1px solid rgba(233,233,237,.10);scroll-margin-top:16px}
+.dv-thd{display:flex;align-items:baseline;gap:10px;margin:0 0 20px}
+.dv-tid{font:600 10px ui-monospace,Menlo,monospace;padding:3px 7px;background:#e9e9ed;color:#161826;border-radius:4px;text-decoration:none}
+.dv-tname{font:500 13px/1.2 "Inter",system-ui,sans-serif;color:#e9e9ed}
+.dv-opts{display:flex;flex-wrap:wrap;gap:34px;align-items:flex-start}
+.dv-opt{flex:none;display:flex;flex-direction:column;gap:9px;scroll-margin-top:16px}
+.dv-oid{font:600 10.5px ui-monospace,Menlo,monospace;padding:3px 7px;background:rgba(233,233,237,.12);color:#e9e9ed;border-radius:5px;text-decoration:none}
+.dv-olabel{display:flex;align-items:baseline;gap:8px;font:400 11px/1.3 "Inter",system-ui,sans-serif;color:rgba(233,233,237,.55)}
+.dv-card{max-width:100%;background:var(--color-bg);border-radius:10px;box-shadow:var(--shadow-md);overflow:hidden}
+.dv-opt:target .dv-oid{background:var(--color-accent);color:#161826}
+.dv-next{margin:26px 0 0;font:12px/1.6 "Inter",system-ui,sans-serif;color:rgba(233,233,237,.5)}
+.chk{width:15px;height:15px;flex:none;border:1.5px solid var(--color-divider);border-radius:3px}
+.chk-on{border-color:var(--color-accent);background:var(--color-accent);box-shadow:inset 0 0 0 3px var(--color-bg)}
+.ph{background:repeating-linear-gradient(135deg,rgba(233,233,237,.05) 0 6px,transparent 6px 12px);border:1px dashed rgba(233,233,237,.16);border-radius:var(--radius-md);display:grid;place-items:center;font:10px ui-monospace,Menlo,monospace;color:rgba(233,233,237,.4);letter-spacing:.04em}
+</style></helmet>
+
+<section class="dv-turn" id="t4">
+<div class="dv-thd"><a class="dv-tid" href="#t4">4</a><span class="dv-tname">After saving the AI suggestions — the panel is gone, the items are yours</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="4a"><div class="dv-olabel"><a class="dv-oid" href="#4a">4a</a><a class="dv-oid" href="#1c">1c</a> once the two picks are saved — AI summary stays, suggestions do not come back</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#3a" aria-current="page" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#4a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="display:grid;grid-template-columns:1fr 360px">
+    <div style="padding:28px 34px 34px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span class="tag tag-outline">PSY 214</span><span class="text-muted" style="font-size:12px">Lecture 7 · 26 Aug 2026 · 1,240 words</span></div>
+      <h3 style="margin:0 0 18px">Working memory and retrieval</h3>
+      <div style="font-size:14px;line-height:1.75;color:rgba(233,233,237,.86);display:flex;flex-direction:column;gap:13px">
+        <p style="margin:0">Phonological loop vs. visuospatial sketchpad, with the central executive allocating attention. Capacity is closer to four chunks than seven — Cowan's revision — so span tests really measure chunking.</p>
+        <p style="margin:0">Episodic buffer (2000) accounts for cross-modal binding. Recognition outlasts recall because retrieval cues carry the load; encoding specificity predicts which cues work.</p>
+        <figure style="margin:0"><div class="ph" style="height:190px">figure — encoding-specificity graph, slide 22</div><figcaption>Encoding specificity — note the outlier condition</figcaption></figure>
+        <p style="margin:0">The outlier condition in the graph was not explained in the lecture. Worth asking about, since it cuts against the cue-overlap account.</p>
+      </div>
+    </div>
+    <div style="padding:28px 30px 34px;background:var(--color-surface);display:flex;flex-direction:column;gap:22px">
+      <div>
+        <h6 style="color:var(--color-accent);margin-bottom:9px">12-hour summary</h6>
+        <div style="font-size:13.5px;line-height:1.7;color:rgba(233,233,237,.9)">Span tests overstate capacity: chunking, not slots. Episodic buffer still fuzzy — close that gap before Friday. Retrieval cues do the work in recognition.</div>
+        <div class="text-muted" style="font-size:11px;margin-top:8px">You wrote this at 21:40 · <a href="#1a">edit</a></div>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px"><h6 style="color:var(--color-accent);margin:0">Action items</h6><span class="text-muted" style="font-size:11px">1 of 5 done</span></div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Re-read Baddeley ch. 4</span><span class="tag tag-accent">2d</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Ask about slide 22 outlier</span><span class="tag tag-neutral">6d</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px"><span class="chk" style="margin-top:3px"></span><span style="flex:1"><span style="display:block;font-size:13.5px">Find Cowan (2001), check the four-chunk figure</span><span class="text-muted" style="font-size:10.5px;display:inline-flex;align-items:center;gap:4px;margin-top:2px"><svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144Z"/></svg>from AI suggestion</span></span><span class="tag tag-neutral">1d</span></div>
+          <div style="display:flex;align-items:flex-start;gap:10px"><span class="chk" style="margin-top:3px"></span><span style="flex:1"><span style="display:block;font-size:13.5px">Write recall vs. recognition in your own words</span><span class="text-muted" style="font-size:10.5px;display:inline-flex;align-items:center;gap:4px;margin-top:2px"><svg width="11" height="11" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144Z"/></svg>from AI suggestion</span></span><span class="text-muted" style="font-size:11px">no date</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk chk-on"></span><span style="flex:1;font-size:13.5px;color:rgba(233,233,237,.42);text-decoration:line-through">Download slides</span></div>
+        </div>
+        <div style="display:flex;align-items:center;gap:8px;margin-top:11px">
+          <button class="btn btn-ghost" style="padding-inline:var(--space-1)">+ Add item</button>
+          <span class="text-muted" style="font-size:11px;margin-left:auto">2 added from suggestions · <a href="#4a">undo</a></span>
+        </div>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div style="padding:14px;border-radius:var(--radius-md);box-shadow:inset 0 0 0 1px var(--color-accent-700);background:color-mix(in srgb, var(--color-accent) 6%, transparent)">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:9px">
+          <span style="display:inline-flex;color:var(--color-accent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144Z"/></svg></span>
+          <h6 style="margin:0;flex:none;white-space:nowrap;color:var(--color-accent)">AI summary</h6>
+        </div>
+        <div class="text-muted" style="font-size:10.5px;margin:-4px 0 9px">Separate from your own summary — it never replaces it.</div>
+        <div style="font-size:13px;line-height:1.65;color:rgba(233,233,237,.85)">The lecture set out Baddeley's components, then replaced the seven-item span with Cowan's four-chunk estimate. The second half argued that recognition outlasts recall because retrieval cues, not storage, carry the load — with one unexplained outlier in the encoding-specificity data.</div>
+        <div class="text-muted" style="font-size:10.5px;margin-top:8px;display:flex;align-items:center;gap:10px">
+          <span>Written by AI when you saved these notes, 11:04 · regenerates on the next edit</span>
+          <span style="margin-left:auto;display:flex;gap:9px"><a href="#4a">regenerate</a><a href="#4a">hide</a></span>
+        </div>
+        <div style="height:1px;margin:13px 0 11px;background:var(--color-accent-800)"></div>
+        <div class="text-muted" style="font-size:11px;line-height:1.55">Suggested actions were handled on 26 Aug — 2 saved, 1 skipped. New suggestions only appear if you edit the notes.</div>
+      </div>
+      <div style="display:flex;gap:9px;margin-top:auto"><a class="btn btn-primary" href="#1a" style="flex:1">Edit entry</a><button class="btn btn-secondary">Export</button></div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Try next: "let me reopen the skipped suggestions" · "put the AI summary above my own in <a class="dv-oid" href="#4a">4a</a>" · "show the regenerating state after an edit"</p>
+</section>
+
+<section class="dv-turn" id="t3">
+<div class="dv-thd"><a class="dv-tid" href="#t3">3</a><span class="dv-tname">The screen the nav promised — Entries, newest first, grouped by day</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="3a"><div class="dv-olabel"><a class="dv-oid" href="#3a">3a</a>Entries — all courses, sorted by date; rows open <a class="dv-oid" href="#1c">1c</a></div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#3a" aria-current="page" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#3a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:28px 34px 36px">
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px">
+      <h3 style="margin:0">Entries</h3>
+      <span class="text-muted" style="font-size:12px;margin-right:auto">37 entries · newest first</span>
+      <div class="input" style="width:210px;display:flex;align-items:center;gap:8px;color:rgba(233,233,237,.45)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></svg>Search notes</div>
+      <div class="input" style="width:170px;display:flex;align-items:center;justify-content:space-between">All courses<span class="text-muted" style="display:inline-flex"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></div>
+      <div class="seg"><label class="seg-opt"><input type="radio" name="ent" checked>All</label><label class="seg-opt"><input type="radio" name="ent">No summary</label></div>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:26px">
+      <div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:9px"><h6 style="margin:0;color:var(--color-accent)">Today · Wed 26 Aug</h6><span class="text-muted" style="font-size:11px">2 entries</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#2b" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">CS 240</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Balanced trees</span><span class="text-muted" style="font-size:12px">AVL keeps height within 1.44 log n by rotating on insert; red-black trades a looser bound…</span></span>
+            <span class="tag tag-outline" style="flex:none">summary to write</span>
+            <span class="text-muted" style="flex:none;width:78px;text-align:right;font-size:12px">3 actions</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">11:15</span>
+          </a>
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">PSY 214</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Working memory and retrieval</span><span class="text-muted" style="font-size:12px">Span tests overstate capacity: chunking, not slots. Episodic buffer still fuzzy…</span></span>
+            <span style="flex:none;font-size:12px;color:var(--color-accent)">summary written</span>
+            <span class="text-muted" style="flex:none;width:78px;text-align:right;font-size:12px">2 actions</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">09:00</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:9px"><h6 style="margin:0;color:rgba(233,233,237,.6)">Tue 25 Aug</h6><span class="text-muted" style="font-size:11px">1 entry</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">STAT 260</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Likelihood ratio tests</span><span class="text-muted" style="font-size:12px">Neyman–Pearson gives the most powerful test for a simple hypothesis pair…</span></span>
+            <span style="flex:none;font-size:12px;color:var(--color-accent)">summary written</span>
+            <span style="flex:none;width:78px;text-align:right;font-size:12px;color:var(--color-accent)">4 · 1 late</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">14:00</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:9px"><h6 style="margin:0;color:rgba(233,233,237,.6)">Mon 24 Aug</h6><span class="text-muted" style="font-size:11px">2 entries</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">HIST 118</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Partition historiography</span><span class="text-muted" style="font-size:12px">The high-politics account versus the provincial one; who counts as an actor…</span></span>
+            <span style="flex:none;font-size:12px;color:var(--color-accent)">summary written</span>
+            <span class="text-muted" style="flex:none;width:78px;text-align:right;font-size:12px">no actions</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">10:00</span>
+          </a>
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">CS 240</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Heaps and heapsort</span><span class="text-muted" style="font-size:12px">Sift-down builds a heap in linear time; the log factor only shows up per extraction…</span></span>
+            <span style="flex:none;font-size:12px;color:var(--color-accent)">summary written</span>
+            <span class="text-muted" style="flex:none;width:78px;text-align:right;font-size:12px">1 action</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">11:15</span>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div style="display:flex;align-items:baseline;gap:10px;margin-bottom:9px"><h6 style="margin:0;color:rgba(233,233,237,.6)">Fri 21 Aug</h6><span class="text-muted" style="font-size:11px">1 entry</span></div>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <a href="#1c" style="text-decoration:none;color:inherit;display:flex;align-items:center;gap:16px;padding:13px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+            <span class="tag tag-neutral" style="flex:none;width:76px;justify-content:center">PHIL 105</span>
+            <span style="flex:1;min-width:0"><span style="display:block;font-family:var(--font-heading);font-size:15px;margin-bottom:3px">Contractualism</span><span class="text-muted" style="font-size:12px">Scanlon's principle of reasonable rejection, and what it asks of a justification…</span></span>
+            <span class="tag tag-outline" style="flex:none">summary missed</span>
+            <span class="text-muted" style="flex:none;width:78px;text-align:right;font-size:12px">1 action</span>
+            <span class="text-muted" style="flex:none;width:60px;text-align:right;font-size:12px">15:00</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;justify-content:center;margin-top:24px"><button class="btn btn-secondary">Load earlier entries</button></div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Try next: "group <a class="dv-oid" href="#3a">3a</a> by course instead of date" · "make it a compact table like <a class="dv-oid" href="#1f">1f</a>'s" · "add a month divider and a calendar strip"</p>
+</section>
+
+<section class="dv-turn" id="t2">
+<div class="dv-thd"><a class="dv-tid" href="#t2">2</a><span class="dv-tname">The states the flow needs — empty library, entry without a summary, overdue nudge</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="2a"><div class="dv-olabel"><a class="dv-oid" href="#2a">2a</a>Empty — first run, no courses yet (<a class="dv-oid" href="#1e">1e</a> before any data)</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#2a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:28px 34px 40px">
+    <h3 style="margin:0 0 22px">Courses</h3>
+    <div style="max-width:520px;padding:34px 0 10px">
+      <div style="width:38px;height:38px;border-radius:var(--radius-md);box-shadow:inset 0 0 0 1px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);margin-bottom:18px"><svg width="20" height="20" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg></div>
+      <h4 style="margin:0 0 8px">Add your first course</h4>
+      <p style="font-size:13.5px;line-height:1.7;color:rgba(233,233,237,.65);margin:0 0 20px">A course holds one entry per lecture: your notes, the summary you write at the end of the day, and whatever you owe yourself afterwards. Add the course now, or start an entry and name the course as you go.</p>
+      <div style="display:flex;gap:10px"><button class="btn btn-primary">Add a course</button><a class="btn btn-secondary" href="#1a">Start an entry</a><button class="btn btn-ghost">Import from a timetable</button></div>
+    </div>
+    <hr class="hr" style="margin:34px 0 22px">
+    <div class="text-muted" style="font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px">What a course looks like once it's running</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;opacity:.34">
+      <div class="card"><span class="card-kicker">PSY 214</span><div class="card-title">Cognitive Psychology</div><p class="card-body">Latest — 26 Aug · Working memory and retrieval</p><div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:58%;height:100%;background:var(--color-accent)"></div></div></div>
+      <div class="card"><span class="card-kicker">STAT 260</span><div class="card-title">Statistical Inference</div><p class="card-body">Latest — 25 Aug · Likelihood ratio tests</p><div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:75%;height:100%;background:var(--color-accent)"></div></div></div>
+      <div class="card"><span class="card-kicker">CS 240</span><div class="card-title">Data Structures</div><p class="card-body">Latest — 26 Aug · Balanced trees</p><div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:92%;height:100%;background:var(--color-accent)"></div></div></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="2b"><div class="dv-olabel"><a class="dv-oid" href="#2b">2b</a>Read view, summary not written yet (<a class="dv-oid" href="#1c">1c</a> with the rail's summary slot empty)</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#2b" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="display:grid;grid-template-columns:1fr 360px">
+    <div style="padding:28px 34px 34px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span class="tag tag-outline">CS 240</span><span class="text-muted" style="font-size:12px">Lecture 11 · 26 Aug 2026 · 640 words · captured 11:15</span></div>
+      <h3 style="margin:0 0 18px">Balanced trees</h3>
+      <div style="font-size:14px;line-height:1.75;color:rgba(233,233,237,.86);display:flex;flex-direction:column;gap:13px">
+        <p style="margin:0">AVL keeps height within 1.44 log n by rotating on insert; red-black trades a looser bound for cheaper rebalancing, which is why library maps use it.</p>
+        <figure style="margin:0"><div class="ph" style="height:170px">pasted screenshot — rotation cases, slide 9</div><figcaption>Four rotation cases — LL, LR, RR, RL</figcaption></figure>
+        <p style="margin:0">Rotation cost is O(1); the log factor comes from how far up the tree the fix propagates. Worked the LR case on the board but did not finish the RL case.</p>
+      </div>
+    </div>
+    <div style="padding:28px 30px 34px;background:var(--color-surface);display:flex;flex-direction:column;gap:22px">
+      <div>
+        <h6 style="color:var(--color-accent);margin-bottom:9px">12-hour summary</h6>
+        <div style="padding:14px;border-radius:var(--radius-md);border:1px dashed var(--color-accent);background:color-mix(in srgb, var(--color-accent) 8%, transparent)">
+          <div style="font-size:13px;line-height:1.6;color:var(--color-accent-300);margin-bottom:12px">Not written yet. Twelve hours after a lecture is when you know what actually stuck — a few lines is enough.</div>
+          <a class="btn btn-primary btn-block" href="#1a" style="margin-top:0">Write it now</a>
+          <div class="text-muted" style="font-size:11px;margin-top:9px;text-align:center">Due by 23:15 tonight · <a href="#2b">remind me</a></div>
+        </div>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px"><h6 style="color:var(--color-accent);margin:0">Action items</h6><span class="text-muted" style="font-size:11px">0 of 3 done</span></div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Implement AVL rotations</span><span class="tag tag-neutral">Mon</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Finish the RL case by hand</span><span class="tag tag-accent">2d</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Compare with red-black bounds</span><span class="text-muted" style="font-size:11px">no date</span></div>
+        </div>
+        <button class="btn btn-ghost" style="margin-top:11px">+ Add item</button>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div>
+        <h6 style="color:var(--color-accent);margin-bottom:9px">Nearby entries</h6>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+          <a href="#1c" style="text-decoration:none;color:rgba(233,233,237,.8)">24 Aug — Heaps and heapsort</a>
+          <a href="#1c" style="text-decoration:none;color:rgba(233,233,237,.8)">19 Aug — Hash tables, open addressing</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:9px;margin-top:auto"><a class="btn btn-primary" href="#1a" style="flex:1">Edit entry</a><button class="btn btn-secondary">Export</button></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="2c"><div class="dv-olabel"><a class="dv-oid" href="#2c">2c</a>Today with two nudges — one overdue action, one missing summary (<a class="dv-oid" href="#1f">1f</a>)</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#2c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:28px 34px 36px">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:20px"><h3 style="margin:0">Wednesday, 26 August</h3><span class="text-muted" style="font-size:12.5px;margin-right:auto">21:15 · one summary and one overdue item left</span><a class="btn btn-primary" href="#1a">New entry</a></div>
+    <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:26px">
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-md);border:1px solid var(--color-accent);background:color-mix(in srgb, var(--color-accent) 9%, transparent)">
+        <span style="flex:none;display:inline-flex;color:var(--color-accent)"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm-8,56a8,8,0,0,1,16,0v52a8,8,0,0,1-16,0Zm8,104a12,12,0,1,1,12-12A12,12,0,0,1,128,184Z"/></svg></span>
+        <div style="flex:1"><div style="font-family:var(--font-heading);font-size:14.5px;margin-bottom:2px">Problem set 3 was due yesterday</div><div style="font-size:12px;color:var(--color-accent-300)">STAT 260 · from the 25 Aug entry on likelihood ratio tests</div></div>
+        <button class="btn btn-secondary">Snooze</button><button class="btn btn-primary">Mark done</button>
+      </div>
+      <div style="display:flex;align-items:center;gap:14px;padding:14px 16px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm)">
+        <span style="flex:none;display:inline-flex;color:rgba(233,233,237,.55)"><svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><circle cx="128" cy="128" r="96"></circle><path d="M128 72 V128 L172 152" stroke-linecap="round"></path></svg></span>
+        <div style="flex:1"><div style="font-family:var(--font-heading);font-size:14.5px;margin-bottom:2px">CS 240 — Balanced trees</div><div class="text-muted" style="font-size:12px">Notes captured 11:15 · no 12-hour summary yet, window closes 23:15</div></div>
+        <a class="btn btn-primary" href="#2b">Write summary</a>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 330px;gap:32px;align-items:start">
+      <div>
+        <h6 style="color:rgba(233,233,237,.6);margin-bottom:6px">Recent entries</h6>
+        <table class="table">
+          <thead><tr><th>Course</th><th>Date</th><th>Entry</th><th>Summary</th><th style="text-align:right">Actions</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-neutral">CS 240</span></td><td>26 Aug</td><td><a href="#2b" style="text-decoration:none;color:inherit">Balanced trees</a></td><td><span class="tag tag-outline">to write</span></td><td style="text-align:right">3</td></tr>
+            <tr><td><span class="tag tag-neutral">PSY 214</span></td><td>26 Aug</td><td><a href="#1c" style="text-decoration:none;color:inherit">Working memory and retrieval</a></td><td style="color:var(--color-accent)">written</td><td style="text-align:right">2</td></tr>
+            <tr><td><span class="tag tag-neutral">STAT 260</span></td><td>25 Aug</td><td>Likelihood ratio tests</td><td style="color:var(--color-accent)">written</td><td style="text-align:right;color:var(--color-accent)">4 · 1 late</td></tr>
+            <tr><td><span class="tag tag-neutral">HIST 118</span></td><td>24 Aug</td><td>Partition historiography</td><td style="color:var(--color-accent)">written</td><td style="text-align:right">0</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px"><h6 style="margin:0;color:var(--color-accent)">Due this week</h6><span class="text-muted" style="font-size:11px">10 open · 1 late</span></div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface);box-shadow:inset 2px 0 0 var(--color-accent)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Problem set 3</div><div class="text-muted" style="font-size:11px">STAT 260 · due 25 Aug</div></div><span class="tag tag-accent">1d late</span></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Re-read Baddeley ch. 4</div><div class="text-muted" style="font-size:11px">PSY 214</div></div><span class="tag tag-neutral">Fri</span></div>
+          <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Implement AVL rotations</div><div class="text-muted" style="font-size:11px">CS 240</div></div><span class="tag tag-neutral">Mon</span></div>
+        </div>
+        <button class="btn btn-ghost" style="margin-top:10px">See all actions</button>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Try next: "make the overdue nudge dismissible" · "add a course-level empty state (course exists, no entries)" · "show what happens after the 23:15 window closes"</p>
+</section>
+
+<section class="dv-turn" id="t1">
+<div class="dv-thd"><a class="dv-tid" href="#t1">1</a><span class="dv-tname">Marginalia — the chosen set: write (<a class="dv-oid" href="#1a">1a</a>), read (<a class="dv-oid" href="#1c">1c</a>), library (<a class="dv-oid" href="#1e">1e</a>), today (<a class="dv-oid" href="#1f">1f</a>) · shared nav, linked together</span></div>
+<div class="dv-opts">
+
+<div class="dv-opt" id="1a"><div class="dv-olabel"><a class="dv-oid" href="#1a">1a</a>New entry — structured form, summary &amp; actions in a right rail</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:26px 34px 30px">
+    <div style="display:flex;align-items:baseline;gap:12px;margin-bottom:22px">
+      <h3 style="margin:0">New entry</h3>
+      <span class="text-muted" style="font-size:12px">Draft saved 14:02</span>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 348px;gap:34px;align-items:start">
+      <div style="display:flex;flex-direction:column;gap:17px">
+        <div style="display:grid;grid-template-columns:1.6fr 1fr;gap:14px">
+          <div class="field"><label>Course</label>
+            <div class="input" style="display:flex;align-items:center;justify-content:space-between">PSY 214 — Cognitive Psychology<span class="text-muted" style="display:inline-flex"><svg width="16" height="16" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></div>
+          </div>
+          <div class="field"><label>Date</label><div class="input" style="display:flex;align-items:center">26 Aug 2026</div></div>
+        </div>
+        <div class="field"><label>Lecture notes</label>
+          <div style="display:flex;align-items:center;gap:2px;padding:5px 7px;background:var(--color-surface);border:1px solid var(--color-divider);border-bottom:0;border-radius:var(--radius-md) var(--radius-md) 0 0">
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);font-size:12px;color:var(--color-accent);box-shadow:inset 0 0 0 1px var(--color-accent)">H2</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);font-size:12px;color:rgba(233,233,237,.7)">H3</span>
+            <span style="width:1px;height:16px;margin:0 6px;background:var(--color-divider)"></span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:var(--radius-sm);font-size:12.5px;font-weight:600;color:rgba(233,233,237,.85)">B</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:var(--radius-sm);font-size:12.5px;font-style:italic;color:rgba(233,233,237,.85);font-family:Georgia,serif">I</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:var(--radius-sm);font-size:12.5px;text-decoration:underline;color:rgba(233,233,237,.85)">U</span>
+            <span style="display:inline-flex;align-items:center;height:26px;padding:0 9px;border-radius:var(--radius-sm);font-size:11.5px;font-family:ui-monospace,Menlo,monospace;color:rgba(233,233,237,.7)">code</span>
+            <span style="width:1px;height:16px;margin:0 6px;background:var(--color-divider)"></span>
+            <span title="Bulleted list" style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);color:rgba(233,233,237,.85)"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><circle cx="44" cy="76" r="13"></circle><circle cx="44" cy="128" r="13"></circle><circle cx="44" cy="180" r="13"></circle><rect x="88" y="69" width="128" height="14" rx="7"></rect><rect x="88" y="121" width="128" height="14" rx="7"></rect><rect x="88" y="173" width="128" height="14" rx="7"></rect></svg></span>
+            <span title="Numbered list" style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);color:rgba(233,233,237,.7)"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><text x="26" y="88" font-family="Inter, sans-serif" font-size="62" font-weight="500" fill="currentColor">1</text><text x="26" y="200" font-family="Inter, sans-serif" font-size="62" font-weight="500" fill="currentColor">2</text><rect x="96" y="62" width="120" height="14" rx="7"></rect><rect x="96" y="174" width="120" height="14" rx="7"></rect></svg></span>
+            <span title="Quote" style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);color:rgba(233,233,237,.7)"><svg width="18" height="18" viewBox="0 0 256 256" fill="currentColor"><rect x="36" y="56" width="14" height="144" rx="7"></rect><rect x="76" y="76" width="140" height="14" rx="7"></rect><rect x="76" y="121" width="140" height="14" rx="7"></rect><rect x="76" y="166" width="96" height="14" rx="7"></rect></svg></span>
+            <span style="width:1px;height:16px;margin:0 6px;background:var(--color-divider)"></span>
+            <span title="Link" style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);color:rgba(233,233,237,.7)"><svg width="18" height="18" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round"><rect x="24" y="96" width="112" height="64" rx="32"></rect><rect x="120" y="96" width="112" height="64" rx="32"></rect></svg></span>
+            <span title="Image" style="display:inline-flex;align-items:center;height:26px;padding:0 8px;border-radius:var(--radius-sm);color:rgba(233,233,237,.7)"><svg width="18" height="18" viewBox="0 0 256 256"><rect x="32" y="48" width="192" height="160" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><circle cx="92" cy="100" r="16" fill="currentColor"></circle><path d="M40 190 L104 130 L168 190 Z" fill="currentColor"></path><path d="M132 190 L176 146 L216 186 L216 190 Z" fill="currentColor"></path></svg></span>
+            <span style="margin-left:auto;font-size:11px;color:rgba(233,233,237,.35)">⌘B ⌘I · "## " for a heading</span>
+          </div>
+          <div class="input" style="min-height:300px;padding:12px 14px;font-size:13.5px;line-height:1.65;color:rgba(233,233,237,.9);border-radius:0 0 var(--radius-md) var(--radius-md)">
+            <div style="font-family:var(--font-heading);font-size:17px;font-weight:500;margin-bottom:9px">Working memory — Baddeley model</div>
+            <ul style="margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px">
+              <li>Phonological loop vs. <em>visuospatial sketchpad</em>; the central executive allocates attention between them.</li>
+              <li>Capacity ≈ 4 chunks, not 7 — <strong style="font-weight:600">Cowan's revision</strong>. Chunking is the lever, not raw span.</li>
+              <li>Episodic buffer added 2000 to explain cross-modal binding.</li>
+            </ul>
+            <div style="font-family:var(--font-heading);font-size:17px;font-weight:500;margin:14px 0 9px">Recall vs. recognition</div>
+            <ol style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:4px">
+              <li>Recognition survives longer; retrieval cues do most of the work.</li>
+              <li>Slide 22 — the encoding-specificity graph. Ask about the outlier condition.</li>
+            </ol>
+            <div style="display:flex;align-items:flex-start;gap:8px;margin:12px 0 4px">
+              <span title="Drag to move" style="flex:none;display:inline-flex;padding-top:4px;color:rgba(233,233,237,.28)"><svg width="14" height="14" viewBox="0 0 256 256" fill="currentColor"><circle cx="100" cy="60" r="16"></circle><circle cx="156" cy="60" r="16"></circle><circle cx="100" cy="128" r="16"></circle><circle cx="156" cy="128" r="16"></circle><circle cx="100" cy="196" r="16"></circle><circle cx="156" cy="196" r="16"></circle></svg></span>
+              <figure style="flex:1;margin:0">
+                <div class="ph" style="height:150px">pasted screenshot — slide 22</div>
+                <figcaption style="display:flex;align-items:center;justify-content:space-between;gap:10px">
+                  <span>Encoding specificity — note the outlier condition</span>
+                  <span style="display:flex;gap:8px;color:rgba(233,233,237,.45)">
+                    <span>space above</span><span>space below</span><span>remove</span>
+                  </span>
+                </figcaption>
+              </figure>
+            </div>
+            <div style="display:flex;align-items:center;gap:8px;margin:2px 0 8px;color:rgba(233,233,237,.3);font-size:10.5px">
+              <span style="flex:none;display:inline-flex"><svg width="12" height="12" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg></span>
+              <span style="flex:1;height:1px;background:linear-gradient(to right,var(--color-divider),transparent)"></span>
+            </div>
+            <ul style="margin:0;padding-left:18px"><li>Cue overlap account doesn't cover it — check the reading.</li></ul>
+          </div>
+          <div class="text-muted" style="font-size:11px;margin-top:6px">Type, or paste from a doc — formatting is kept. Paste or drop an image and it lands inline at the cursor; add space above or below to place it.</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div style="padding:16px;border-radius:var(--radius-md);background:var(--color-surface);box-shadow:var(--shadow-sm)">
+          <div class="card-kicker" style="margin-bottom:8px">12-hour summary</div>
+          <div class="text-muted" style="font-size:11.5px;margin-bottom:10px">Written at the end of the day — what you actually gained from this lecture.</div>
+          <div class="input" style="min-height:130px;padding:10px 12px;font-size:13px;line-height:1.6;background:var(--color-bg)">I can now explain why span tests overstate capacity: chunking, not slots. Still shaky on the episodic buffer's role — that's the gap to close before the seminar.</div>
+          <div class="text-muted" style="font-size:10.5px;margin-top:7px;text-align:right">312 / 800</div>
+        </div>
+        <div>
+          <div class="card-kicker" style="margin-bottom:10px">Action items</div>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:var(--radius-md);background:var(--color-surface)">
+              <span class="chk"></span>
+              <span style="flex:1;font-size:13px">Re-read Baddeley ch. 4</span>
+              <span class="tag tag-accent">28 Aug</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:var(--radius-md);background:var(--color-surface)">
+              <span class="chk"></span>
+              <span style="flex:1;font-size:13px">Ask Dr. Neale about slide 22</span>
+              <span class="tag tag-neutral">1 Sep</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:10px;padding:9px 11px;border-radius:var(--radius-md);border:1px dashed var(--color-divider)">
+              <span class="chk"></span>
+              <span style="flex:1;font-size:13px;color:rgba(233,233,237,.4)">Add an action item…</span>
+              <span class="text-muted" style="font-size:11px">+ due</span>
+            </div>
+          </div>
+        </div>
+        <div style="display:flex;gap:9px"><button class="btn btn-primary" style="flex:1">Save entry</button><button class="btn btn-secondary">Discard</button></div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="1c"><div class="dv-olabel"><a class="dv-oid" href="#1c">1c</a>Note detail — notes left; your summary, the AI summary &amp; suggested actions in the rail</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="display:grid;grid-template-columns:1fr 360px">
+    <div style="padding:28px 34px 34px">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px"><span class="tag tag-outline">PSY 214</span><span class="text-muted" style="font-size:12px">Lecture 7 · 26 Aug 2026 · 1,240 words</span></div>
+      <h3 style="margin:0 0 18px">Working memory and retrieval</h3>
+      <div style="font-size:14px;line-height:1.75;color:rgba(233,233,237,.86);display:flex;flex-direction:column;gap:13px">
+        <p style="margin:0">Phonological loop vs. visuospatial sketchpad, with the central executive allocating attention. Capacity is closer to four chunks than seven — Cowan's revision — so span tests really measure chunking.</p>
+        <p style="margin:0">Episodic buffer (2000) accounts for cross-modal binding. Recognition outlasts recall because retrieval cues carry the load; encoding specificity predicts which cues work.</p>
+        <figure style="margin:0"><div class="ph" style="height:190px">figure — encoding-specificity graph, slide 22</div><figcaption>Encoding specificity — note the outlier condition</figcaption></figure>
+        <p style="margin:0">The outlier condition in the graph was not explained in the lecture. Worth asking about, since it cuts against the cue-overlap account.</p>
+      </div>
+    </div>
+    <div style="padding:28px 30px 34px;background:var(--color-surface);display:flex;flex-direction:column;gap:22px">
+      <div>
+        <h6 style="color:var(--color-accent);margin-bottom:9px">12-hour summary</h6>
+        <div style="font-size:13.5px;line-height:1.7;color:rgba(233,233,237,.9)">Span tests overstate capacity: chunking, not slots. Episodic buffer still fuzzy — close that gap before Friday. Retrieval cues do the work in recognition.</div>
+        <div class="text-muted" style="font-size:11px;margin-top:8px">You wrote this at 21:40 · <a href="#1a">edit</a></div>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div>
+        <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:10px"><h6 style="color:var(--color-accent);margin:0">Action items</h6><span class="text-muted" style="font-size:11px">1 of 3 done</span></div>
+        <div style="display:flex;flex-direction:column;gap:9px">
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Re-read Baddeley ch. 4</span><span class="tag tag-accent">2d</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk"></span><span style="flex:1;font-size:13.5px">Ask about slide 22 outlier</span><span class="tag tag-neutral">6d</span></div>
+          <div style="display:flex;align-items:center;gap:10px"><span class="chk chk-on"></span><span style="flex:1;font-size:13.5px;color:rgba(233,233,237,.42);text-decoration:line-through">Download slides</span></div>
+        </div>
+        <button class="btn btn-ghost" style="margin-top:11px">+ Add item</button>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div style="padding:14px;border-radius:var(--radius-md);box-shadow:inset 0 0 0 1px var(--color-accent-700);background:color-mix(in srgb, var(--color-accent) 6%, transparent)">
+        <div style="display:flex;align-items:center;gap:7px;margin-bottom:9px">
+          <span style="display:inline-flex;color:var(--color-accent)"><svg width="15" height="15" viewBox="0 0 256 256" fill="currentColor"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></svg></span>
+          <h6 style="margin:0;flex:none;white-space:nowrap;color:var(--color-accent)">AI summary</h6>
+        </div>
+        <div class="text-muted" style="font-size:10.5px;margin:-4px 0 9px">Separate from your own summary — it never replaces it.</div>
+        <div style="font-size:13px;line-height:1.65;color:rgba(233,233,237,.85)">The lecture set out Baddeley's components, then replaced the seven-item span with Cowan's four-chunk estimate. The second half argued that recognition outlasts recall because retrieval cues, not storage, carry the load — with one unexplained outlier in the encoding-specificity data.</div>
+        <div class="text-muted" style="font-size:10.5px;margin-top:8px;display:flex;align-items:center;gap:10px">
+          <span>Written by AI when you saved these notes, 11:04 · regenerates on the next edit</span>
+          <span style="margin-left:auto;display:flex;gap:9px"><a href="#1c">regenerate</a><a href="#1c">hide</a></span>
+        </div>
+
+        <div style="height:1px;margin:14px 0 12px;background:var(--color-accent-800)"></div>
+
+        <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:4px">
+          <h6 style="margin:0;color:var(--color-accent)">Suggested actions</h6>
+          <span class="text-muted" style="font-size:10.5px;margin-left:auto">2 of 3 new selected</span>
+        </div>
+        <div class="text-muted" style="font-size:11px;margin-bottom:10px">Tick the ones you want; only those are saved to your action items, and this panel closes once you do. Anything already on your list is greyed out.</div>
+        <div style="display:flex;flex-direction:column;gap:7px">
+          <label style="display:flex;align-items:flex-start;gap:9px;padding:9px 10px;border-radius:var(--radius-sm);background:var(--color-bg);box-shadow:inset 0 0 0 1px var(--color-accent);cursor:pointer">
+            <span style="width:15px;height:15px;flex:none;margin-top:2px;border-radius:3px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent)"><svg width="11" height="11" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"><path d="M52 132 L100 180 L204 76"></path></svg></span>
+            <span style="flex:1"><span style="display:block;font-size:12.5px;line-height:1.45">Find Cowan (2001) and check the four-chunk figure</span><span class="text-muted" style="font-size:10.5px">suggested due Thu 27 Aug — before the seminar</span></span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:9px;padding:9px 10px;border-radius:var(--radius-sm);background:var(--color-bg);box-shadow:inset 0 0 0 1px var(--color-accent);cursor:pointer">
+            <span style="width:15px;height:15px;flex:none;margin-top:2px;border-radius:3px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent)"><svg width="11" height="11" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"><path d="M52 132 L100 180 L204 76"></path></svg></span>
+            <span style="flex:1"><span style="display:block;font-size:12.5px;line-height:1.45">Write the difference between recall and recognition in your own words</span><span class="text-muted" style="font-size:10.5px">no date suggested</span></span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:9px;padding:9px 10px;border-radius:var(--radius-sm);background:var(--color-bg);cursor:pointer">
+            <span class="chk" style="margin-top:2px"></span>
+            <span style="flex:1"><span style="display:block;font-size:12.5px;line-height:1.45">Redraw the encoding-specificity graph from memory</span><span class="text-muted" style="font-size:10.5px">suggested due Mon 31 Aug</span></span>
+          </label>
+          <label style="display:flex;align-items:flex-start;gap:9px;padding:9px 10px;border-radius:var(--radius-sm);background:var(--color-bg);cursor:pointer;opacity:.55">
+            <span class="chk" style="margin-top:2px"></span>
+            <span style="flex:1"><span style="display:block;font-size:12.5px;line-height:1.45;text-decoration:line-through">Ask about the slide 22 outlier</span><span class="text-muted" style="font-size:10.5px">already on your list · due Tue 1 Sep</span></span>
+          </label>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:11px">
+          <button class="btn btn-primary" style="flex:1">Save 2 to my list</button>
+          <button class="btn btn-secondary">Dismiss</button>
+        </div>
+      </div>
+      <hr class="hr" style="margin:0;background:linear-gradient(to right,transparent,var(--color-divider) 24px,var(--color-divider) calc(100% - 24px),transparent)">
+      <div>
+        <h6 style="color:var(--color-accent);margin-bottom:9px">Nearby entries</h6>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:13px">
+          <a href="#1c" style="text-decoration:none;color:rgba(233,233,237,.8)">19 Aug — Attention and filtering</a>
+          <a href="#1c" style="text-decoration:none;color:rgba(233,233,237,.8)">12 Aug — Encoding and rehearsal</a>
+        </div>
+      </div>
+      <div style="display:flex;gap:9px;margin-top:auto"><a class="btn btn-primary" href="#1a" style="flex:1">Edit entry</a><button class="btn btn-secondary">Export</button></div>
+    </div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="1e"><div class="dv-olabel"><a class="dv-oid" href="#1e">1e</a>Course library — one card per course</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:28px 34px 36px">
+    <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px">
+      <h3 style="margin:0">Courses</h3>
+      <span class="text-muted" style="font-size:12px;margin-right:auto">Autumn 2026 · 5 active</span>
+      <div class="seg"><label class="seg-opt"><input type="radio" name="lib" checked>Active</label><label class="seg-opt"><input type="radio" name="lib">Archived</label></div>
+      <a class="btn btn-primary" href="#1a">New entry</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+      <div class="card elev-sm" style="gap:var(--space-3)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="card-kicker">PSY 214</span><span class="text-muted" style="font-size:11px">7 entries</span></div>
+        <div class="card-title">Cognitive Psychology</div>
+        <p class="card-body">Latest — 26 Aug · Working memory and retrieval</p>
+        <div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:58%;height:100%;background:var(--color-accent)"></div></div>
+        <div class="card-meta"><span style="color:var(--color-accent)">2 open actions</span><span>·</span><span>next due Fri</span></div>
+      </div>
+      <div class="card elev-sm" style="gap:var(--space-3)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="card-kicker">STAT 260</span><span class="text-muted" style="font-size:11px">9 entries</span></div>
+        <div class="card-title">Statistical Inference</div>
+        <p class="card-body">Latest — 25 Aug · Likelihood ratio tests</p>
+        <div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:75%;height:100%;background:var(--color-accent)"></div></div>
+        <div class="card-meta"><span style="color:var(--color-accent)">4 open actions</span><span>·</span><span>1 overdue</span></div>
+      </div>
+      <div class="card elev-sm" style="gap:var(--space-3)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="card-kicker">HIST 118</span><span class="text-muted" style="font-size:11px">6 entries</span></div>
+        <div class="card-title">Modern South Asia</div>
+        <p class="card-body">Latest — 24 Aug · Partition historiography</p>
+        <div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:50%;height:100%;background:var(--color-accent)"></div></div>
+        <div class="card-meta"><span>no open actions</span></div>
+      </div>
+      <div class="card elev-sm" style="gap:var(--space-3)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="card-kicker">CS 240</span><span class="text-muted" style="font-size:11px">11 entries</span></div>
+        <div class="card-title">Data Structures</div>
+        <p class="card-body">Latest — 26 Aug · Balanced trees</p>
+        <div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:92%;height:100%;background:var(--color-accent)"></div></div>
+        <div class="card-meta"><span style="color:var(--color-accent)">3 open actions</span><span>·</span><span>next due Mon</span></div>
+      </div>
+      <div class="card elev-sm" style="gap:var(--space-3)">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><span class="card-kicker">PHIL 105</span><span class="text-muted" style="font-size:11px">4 entries</span></div>
+        <div class="card-title">Ethics</div>
+        <p class="card-body">Latest — 21 Aug · Contractualism</p>
+        <div style="height:4px;border-radius:2px;background:rgba(233,233,237,.1);overflow:hidden"><div style="width:33%;height:100%;background:var(--color-accent)"></div></div>
+        <div class="card-meta"><span class="text-muted">summary missing for 2 entries</span></div>
+      </div>
+      <div style="display:grid;place-items:center;border-radius:var(--radius-md);border:1px dashed var(--color-divider);min-height:150px">
+        <button class="btn btn-ghost">+ Add course</button>
+      </div>
+    </div>
+    <div class="text-muted" style="font-size:11px;margin-top:14px">The bar shows entries that have a 12-hour summary written.</div>
+  </div>
+</div></div>
+
+<div class="dv-opt" id="1f"><div class="dv-olabel"><a class="dv-oid" href="#1f">1f</a>Dashboard — every course, recent entries and what's due</div>
+<div class="dv-card" style="width:1120px">
+  <div class="nav" style="box-shadow:0 1px 0 rgba(233,233,237,.08);gap:var(--space-6)"><span class="nav-brand" style="display:inline-flex;align-items:center;gap:8px;margin-right:var(--space-6)"><span style="width:20px;height:20px;border-radius:6px;box-shadow:inset 0 0 0 1.5px var(--color-accent);display:grid;place-items:center;color:var(--color-accent);font-size:11px">M</span>Marginalia</span><a href="#1f" style="display:inline-flex;align-items:center;gap:6px" aria-current="page"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M128 36 L226 118 L202 118 L202 212 L54 212 L54 118 L30 118 Z"/></svg>Today</a><a href="#1e" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16"><rect x="32" y="44" width="76" height="168" rx="12"></rect><rect x="148" y="44" width="76" height="168" rx="12"></rect></svg>Courses</a><a href="#1c" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="44" y="32" width="168" height="192" rx="16" fill="none" stroke="currentColor" stroke-width="16"></rect><rect x="76" y="80" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="120" width="104" height="14" rx="7" fill="currentColor"></rect><rect x="76" y="160" width="64" height="14" rx="7" fill="currentColor"></rect></svg>Entries</a><a href="#1a" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256" fill="currentColor"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></svg>New</a><a href="#1f" style="display:inline-flex;align-items:center;gap:6px"><svg width="17" height="17" viewBox="0 0 256 256"><rect x="40" y="40" width="176" height="176" rx="20" fill="none" stroke="currentColor" stroke-width="16"></rect><path d="M84 130 L116 162 L176 100" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"></path></svg>Actions</a><span style="margin-left:auto;display:flex;align-items:center;gap:10px"><span style="width:26px;height:26px;border-radius:50%;background:var(--color-accent-800);color:var(--color-accent-100);display:grid;place-items:center;font-size:11px">AR</span></span></div>
+  <div style="padding:28px 34px 36px">
+    <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:6px"><h3 style="margin:0">Wednesday, 26 August</h3><span class="text-muted" style="font-size:12.5px;margin-right:auto">2 lectures today · 1 summary still to write</span><a class="btn btn-primary" href="#1a">New entry</a></div>
+    <div style="display:grid;grid-template-columns:1fr 330px;gap:32px;margin-top:24px;align-items:start">
+      <div>
+        <div style="padding:16px 18px;border-radius:var(--radius-md);box-shadow:var(--shadow-sm);display:flex;align-items:center;gap:16px;margin-bottom:24px">
+          <div style="flex:1"><div style="font-family:var(--font-heading);font-size:16px;margin-bottom:3px">CS 240 — Balanced trees</div><div class="text-muted" style="font-size:12px">Notes captured 11:15 · no 12-hour summary yet</div></div>
+          <a class="btn btn-primary" href="#1a">Write summary</a>
+        </div>
+        <h6 style="color:rgba(233,233,237,.6);margin-bottom:6px">Recent entries</h6>
+        <table class="table">
+          <thead><tr><th>Course</th><th>Date</th><th>Entry</th><th>Summary</th><th style="text-align:right">Actions</th></tr></thead>
+          <tbody>
+            <tr><td><span class="tag tag-neutral">CS 240</span></td><td>26 Aug</td><td>Balanced trees</td><td class="text-muted">—</td><td style="text-align:right">3</td></tr>
+            <tr><td><span class="tag tag-neutral">PSY 214</span></td><td>26 Aug</td><td><a href="#1c" style="text-decoration:none;color:inherit">Working memory and retrieval</a></td><td style="color:var(--color-accent)">written</td><td style="text-align:right">2</td></tr>
+            <tr><td><span class="tag tag-neutral">STAT 260</span></td><td>25 Aug</td><td>Likelihood ratio tests</td><td style="color:var(--color-accent)">written</td><td style="text-align:right">4</td></tr>
+            <tr><td><span class="tag tag-neutral">HIST 118</span></td><td>24 Aug</td><td>Partition historiography</td><td style="color:var(--color-accent)">written</td><td style="text-align:right">0</td></tr>
+            <tr><td><span class="tag tag-neutral">PHIL 105</span></td><td>21 Aug</td><td>Contractualism</td><td class="text-muted">—</td><td style="text-align:right">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:22px">
+        <div>
+          <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:11px"><h6 style="margin:0;color:var(--color-accent)">Due this week</h6><span class="text-muted" style="font-size:11px">10 open</span></div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Problem set 3</div><div class="text-muted" style="font-size:11px">STAT 260</div></div><span class="tag tag-accent">overdue</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Re-read Baddeley ch. 4</div><div class="text-muted" style="font-size:11px">PSY 214</div></div><span class="tag tag-neutral">Fri</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk"></span><div style="flex:1"><div style="font-size:13px">Implement AVL rotations</div><div class="text-muted" style="font-size:11px">CS 240</div></div><span class="tag tag-neutral">Mon</span></div>
+            <div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:var(--radius-md);background:var(--color-surface)"><span class="chk chk-on"></span><div style="flex:1"><div style="font-size:13px;color:rgba(233,233,237,.42);text-decoration:line-through">Download PSY slides</div></div></div>
+          </div>
+          <button class="btn btn-ghost" style="margin-top:10px">See all actions</button>
+        </div>
+        <div>
+          <h6 style="color:rgba(233,233,237,.6);margin-bottom:10px">Summaries written</h6>
+          <div style="display:flex;align-items:flex-end;gap:5px;height:64px">
+            <div style="flex:1;height:40%;background:var(--color-accent-800);border-radius:2px"></div>
+            <div style="flex:1;height:70%;background:var(--color-accent-800);border-radius:2px"></div>
+            <div style="flex:1;height:55%;background:var(--color-accent-800);border-radius:2px"></div>
+            <div style="flex:1;height:100%;background:var(--color-accent-800);border-radius:2px"></div>
+            <div style="flex:1;height:85%;background:var(--color-accent-800);border-radius:2px"></div>
+            <div style="flex:1;height:60%;background:var(--color-accent);border-radius:2px"></div>
+            <div style="flex:1;height:20%;background:rgba(233,233,237,.12);border-radius:2px"></div>
+          </div>
+          <div class="text-muted" style="font-size:11px;margin-top:7px">Last 7 days · 24 of 31 entries summarised</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></div>
+
+</div>
+<p class="dv-next">Try next: "add the empty and no-summary-yet states" · "show the overdue nudge in <a class="dv-oid" href="#1f">1f</a>" · "make <a class="dv-oid" href="#1e">1e</a> a list instead of cards"</p>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}"></script>
+</body>
+</html>
